@@ -19,7 +19,7 @@ var i = -1
 function emulateMessage() {
     var message = textBox.value
     function makeDelay() {
-        input.innerHTML += "<h1 class='block w-full text-sm pb-3 flex justify-start'> <p style='max-width:66%;' class='text-left bg-white border rounded-md ml-2 px-3 py-2 inline-block'> " + responses[i] + '</p> </h1>'
+        input.innerHTML += "<h1 class='block w-full text-sm pb-3 flex justify-start items-end'> <img src='avater.png' class='w-[20px] mr-[6px] '>  <p style='max-width:66%;' class='text-left bg-white border rounded-md ml-0 px-3 py-2 inline-block'> " + responses[i] + '</p> </h1>'
     }
 
     function disableSendButton() {
@@ -29,7 +29,7 @@ function emulateMessage() {
     }
     
     if (message != "") {
-        input.innerHTML += "<h1 class='block w-full text-sm pb-3'> <p class='text-right  border bg-white mr-2 px-3 py-2 inline-block rounded-md'> " + message + '</p> </h1>'
+        input.innerHTML += "<h1 class='block w-full text-sm pb-3'> <p class='text-right  border bg-white mr-2 px-3 py-2 inline-block rounded-md'> " + message + "</p> </h1>"
         textBox.value = ''
         if (i == responses.length - 1) {
             setTimeout(disableSendButton, 3000)
