@@ -11,7 +11,7 @@
 </head>
 
 <body class="p-4 h-[100vh] flex items-center justify-center">
-    <div class="chat-box relative h-[600px] w-[320px] bg-white border shadow-xl shadow-gray-600 rounded-xl overflow-auto flex flex-col items-center justify-between ring-2 ring-black">
+    <div class="chat-box relative h-[650px] w-[300px] max-h-[720px] max-w-[320px] bg-white border shadow-xl shadow-gray-600 rounded-xl overflow-auto flex flex-col items-center justify-between ring-2 ring-black">
         <div class="bg-white w-full flex items-center justify-between px-5 py-3" style="position:sticky; top: 0; z-index:50;">
             <div class=" text-slate-700 text-2xl ">
                 <i class="fa fa-bars" onclick="openElement('sideNav','flex')"></i>
@@ -44,15 +44,15 @@
                 <button id="sendButton" class="fa fa-paper-plane text-3xl"> </button>
             </div>
         </div>
-        <div style="position:absolute; z-index:100;" id="sideNav" class="hidden flex flex-col justify-between top-0 left-0 w-2/3 h-full bg-white shadow-lg shadow-black">
-            <div class="relative w-full flex items-center justify-between px-3 py-2 pt-4 border-b" >
+        <div style="position:absolute; z-index:100;" id="sideNav" class="overflow-auto flex flex-col justify-between top-0 left-0 w-3/4 h-full bg-white shadow-lg shadow-black">
+            <div style="position:sticky; top-0" class="relative w-full flex items-center justify-between px-3 py-2 pt-4 border-b">
                 <h1 class="text-2xl font-bold">About </h1>
                 <i class=" fa fa-close text-gray-700 top-0 right-0" onclick="closeElement('sideNav')"></i>
             </div>
             <div class="w-full px-3 py-1 ">
                 <span class="text-[0.725em] ">
                     This page is integrated with a small AI simulation programme. Type message and click
-                    the paperplane icon. Javascript AI will give you a response. Give it a try. 
+                    the paperplane icon. Javascript AI will give you a response. Give it a try.
                 </span>
                 <button class="border border-slate-900 text-gray-700 px-2 py-1 text-[0.7em] block m-auto mt-2 rounded-sm" onclick="closeElement('sideNav')"> Get started </button>
             </div>
@@ -77,6 +77,10 @@
                     <div class="text-center text-black p-3">
                         <i class="fa fa-phone text-2xl text-blue-600"></i>
                         <a href="#" class="block text-sm">Call</a>
+                    </div>
+                    <div class="text-center text-black p-3 ">
+                        <i class="fab fa-github text-3xl text-teal-600"></i>
+                        <a href="#" class="block text-sm">GitHub</a>
                     </div>
                     <div class="text-center text-black p-3 ">
                         <i class="fa fa-ellipsis-h text-3xl text-red-600"></i>
