@@ -1,13 +1,13 @@
 var responses = [
-    "Hello! I'm ameka a AI robot programmed with JS,What is you name?",
+    "Hello! I'm a AI robot programmed with JS. What is you name?",
     "Oh,Nice to meet you! <br> How are you?? ",
     'May I know where are you from?? ',
-    'I\'ve never been to this place. I\'ve been stuck inside this GitHub server for a long time.<br> I\'m very glad to meet with you and,I\'d love to talk with you.Lets talk about our hobby!!',
+    'I\'ve never been to this place. I\'ve been stuck inside this GitHub server for a long time.<br> I\'m very glad to meet with you and,I\'d love to talk with you. <br>Lets talk about our hobby!!',
     "Do you like football??",
     "Oh,I don't like it. I love playing racing games on mobile 😅 <br> <br> Are there any apps in your phone that you can't live without??",
     "Hum.. Suppose I give you a offer to fly anywhere around the world for free. <br> where would you like to go?? ",
     "I'd also like to go there. Do you miss those day when you were a child?",
-    "I miss my childHood so much I've a lot of memory wih my developer.I made a lot of mistakes and he teach me with patient..<b>However, Do you like academic studies??</b>",
+    "I miss my childHood so much I've a lot of memory with my developer.I made a lot of mistakes and he teach me with patient..<br><b>However, Do you like academic studies??</b>",
     "If no, You are one of the 99% people who don't like boaring classes. Those who doesn't like academic studies are conventionally called 'ফাঁকিবাজ' by the teachers. What do you think? ",
     "Do you have any memories in you life that will be kept live in your mind untill your <span style='color:red;'> Death </span>??",
     "Do you have any hidden talent or any surprising hobbies?? <br> You can freely share it with me.I wouldn’t tell itbto anyone.",
@@ -20,7 +20,7 @@ var responses = [
 
 
     ]
-var progressInfoArray = ["Initializing...","Reading Response Arry...","Checking performance..."," Setting up environment...","Updating...","Almost done...","Loading..."]
+var progressInfoArray = ["Initializing..","Reading Response Arrays...","Checking performance...","Setting up environment...","Updating...","Almost done...","Loading..."]
 var sendButton = document.getElementById("sendButton")
 var textBox = document.getElementById("textBox")
 
@@ -84,7 +84,7 @@ function emulateMessage() {
     }
 
     if (message != "") {
-        input.innerHTML += "<h1 class='bubble block w-full text-sm pb-3'> <p class='text-right  border bg-white mr-2 px-3 py-2 inline-block rounded-md'> " + message + "</p> </h1>"
+        input.innerHTML += "<h1 class='bubble block w-full text-sm pb-3'> <p class='text-right  border bg-white mr-2 px-3 py-2 inline-block rounded-md' style='max-width:66%;'> " + message + "</p> </h1>"
         textBox.value = ''
         scrollToBottom('liftUp')
 

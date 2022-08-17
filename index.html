@@ -21,25 +21,25 @@
         @font-face {
             src: url("fonts/googleSansText.woff2");
             font-family: "google";
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+                transform-origin: center;
             }
 
-            @keyframes zoomIn {
-                from {
-                    transform: scale(0);
-                    opacity: 0;
-                    transform-origin: center;
-                }
-
-                to {
-                    transform: scale(1);
-                    transform-origin: center;
-                    opacity: 1;
-                }
+            to {
+                transform: scale(1);
+                transform-origin: center;
+                opacity: 1;
             }
+        }
 
-            .zoomIn {
-                animation: zoomIn 0.5s 1 linear;
-            }
+        .zoomIn {
+            animation: zoomIn 0.5s 1 linear;
+        }
     </style>
     <script>
         tailwind.config = {
@@ -49,20 +49,19 @@
 </head>
 
 <body class="tilt p-4 h-[100vh] w-full flex items-start sm:items-center justify-center" onload="removeBootScreen()">
-    <div class="chat-box relative h-full sm:h-[43.5em] w-[23.25em] bg-white rounded-[35px] overflow-auto flex flex-col items-center justify-between ring-8 ring-black">
+    <div class="chat-box relative aspect-[2/4] max-w-[556px] bg-white rounded-[35px] overflow-auto flex flex-col items-center justify-between ring-8 ring-black">
         <div class="w-full bg-white px-2 pt-0 flex items-start justify-between" style="z-index: 250;">
             <div id="statusBar1" class=" flex items-center justify-start w-1/3 pl-3 pt-2.5 text-white">
                 <p class="text-md mr-1 font-bold" id="clock"> 12:01 PM </p>
                 <i class="fab fa-facebook-messenger text-md ml-1"></i>
-                
+
             </div>
             <div class="flex items-start w-1/3 justify-center " style="z-index:350;">
                 <div class="bg-black w-full h-[27px] rounded-bl-2xl rounded-br-2xl text-left text-gray-900 pl-5 pt-[0.4em] text-[0.7em]"> <i class="fa fa-circle mr-1"></i> <i class="fa fa-circle"></i></div>
             </div>
             <div id="statusBar2" class=" flex items-center justify-end w-1/3 pr-3 pt-2.5 text-white">
                 <i class="fab fa-bluetooth text-md ml-1"></i>
-                <i class="fa fa-wifi text-md ml-1"></i
-                <i class="fa fa-battery-full text-md ml-1"></i>
+                <i class="fa fa-wifi text-md ml-1"></i <i class="fa fa-battery-full text-md ml-1"></i>
             </div>
         </div>
 
@@ -113,7 +112,8 @@
             <div class="w-full px-4 py-3">
                 <span class="text-[1em] text-center">
                     This page is integrated with a small <strong>AI simulation programme </strong>. Type message and click
-                    the paperplane icon. Javascript AI will give you a response. Give it a try. <br>
+                    the paperplane icon. Javascript AI will give you a response. Give it a try. <br><br>
+                    You can format text with html code. Image can also be sent with image tag with src attribute.
                     <small>You can click the profile picture to view it in full screen.</small>
                 </span>
                 <button class="animate-pulse border border-slate-900 text-gray-700 px-2 py-1 mt-2 text-[1em] block m-auto mt-4 rounded-full" onclick="closeElement('sideNav')"> Get started </button>
@@ -169,14 +169,14 @@
             <div class="relative h-full w-full">
                 <div class="flex items-center justify-center h-full w-full">
                     <div class="rounded-full flex flex-col items-center justify-center">
-                        <i class="fab fa-apple text-8xl animate-pulse" onclick="closeElement('bootScreen')"></i>
-                        <div id="progressOutput" class="w-full h-[30px] font-extralight text-md flex items-center justify-center mt-2">
-                            Starting AI Engine...
-                        </div>
-                        <div class="w-full h-[1.5rem] w-[200px] font-extralight flex items-end justify-center mt-0">
-                            <div class="bg-gray-400 w-2/3 h-[0.25rem] overflow-hidden">
-                                <div id="prograssFill" class="bg-gray-800 w-[0%] h-[0.25rem] rounded-br-full rounded-tr-full"> </div>
+                        <i class="fab fa-apple text-8xl animate-pulse"></i>
+                        <div class="w-full h-[25px] w-[200px] font-extralight flex items-end justify-center mt-0">
+                            <div class="bg-gray-400 w-2/3 h-[0.25rem] rounded-full ">
+                                <div id="prograssFill" class="bg-gray-800 w-[2%] h-[0.25rem] rounded-full rounded-br-full rounded-tr-full flex items-center justify-end"> <i class="hidden fa fa-circle text-md "></i> </div>
                             </div>
+                        </div>
+                        <div id="progressOutput" class="w-full h-[20px] font-extralight text-md flex items-center justify-center mt-4">
+                            Starting AI Engine...
                         </div>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
 </body>
 <script src="main.js"></script>
 <script>
-    
+
 </script>
 
 </html>
