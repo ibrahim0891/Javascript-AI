@@ -39,20 +39,20 @@ function scrollToBottom(element) {
 var filler = document.getElementById('prograssFill')
 
 function removeBootScreen() {
-    var duration = 10000
+    var duration = 30000
     setTimeout(function() {
         closeElement('bootScreen')
         document.getElementById('statusBar1').style.color = 'black'
         document.getElementById('statusBar2').style.color = 'black'
     }, duration)
-    var j = 0
+    var j = (1000*100)/duration
     function fillProgressBar(j){
         filler.style.width = j+"%"
     }
     setInterval(function(){
-        j += 4
+        j += (1000*100)/duration
         fillProgressBar(j)
-    },(duration/100)+20)
+    },1000)
 }
 
 
