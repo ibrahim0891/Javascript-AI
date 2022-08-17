@@ -20,13 +20,13 @@ var responses = [
 
 
     ]
-
+var progressInfoArray = ["Initializing...","Reading Response Arry...","Checking performance..."," Setting up environment...","Updating...","Almost done...","Loading..."]
 var sendButton = document.getElementById("sendButton")
 var textBox = document.getElementById("textBox")
 
 var output = document.getElementById("output")
 var input = document.getElementById("input")
-
+var progressOutput = document.getElementById('progressOutput')
 var i = -1
 
 function scrollToBottom(element) {
@@ -53,6 +53,16 @@ function removeBootScreen() {
         j += (1000*100)/duration
         fillProgressBar(j)
     },1000)
+    
+    k = 0
+    var progressInfoBreakPoint = duration/(progressInfoArray.length+1)
+    function updateProgressInfo(k) {
+        progressOutput.innerHTML = progressInfoArray[k]
+    }
+    setInterval(function(){
+        updateProgressInfo(k)
+        k++
+    },progressInfoBreakPoint)
 }
 
 
