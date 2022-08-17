@@ -39,7 +39,7 @@ function scrollToBottom(element) {
 var filler = document.getElementById('prograssFill')
 
 function removeBootScreen() {
-    var duration = 30000
+    var duration = 10000
     setTimeout(function() {
         closeElement('bootScreen')
         document.getElementById('statusBar1').style.color = 'black'
