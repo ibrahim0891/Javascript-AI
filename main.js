@@ -79,7 +79,7 @@ function emulateMessage() {
     var message = textBox.value
 
     function makeDelay() {
-        input.innerHTML += "<h1 class='bubble block w-full text-sm pb-3 flex justify-start items-end'> <img src='avater.png' class='w-[20px] mr-[6px] '>  <p style='max-width:66%;' class='responeseMessage text-left bg-blue-400 text-white border rounded-2xl rounded-bl-sm ml-0 px-3 py-2 inline-block'> " + responses[i] + '</p> </h1>'
+        input.innerHTML += "<h1 class='bubble block w-full text-sm pb-3 flex justify-start items-end'> <img src='avater.png' class='w-[20px] mr-[6px] '>  <p style='max-width:66%;' class='responeseMessage text-left bg-white border rounded-lg rounded-bl-sm ml-0 px-3 py-2 inline-block'> " + responses[i] + '</p> </h1>'
         scrollToBottom('liftUp')
     }
 
@@ -91,8 +91,8 @@ function emulateMessage() {
     }
 
     if (message != "") {
-        input.innerHTML += "<h1 class='bubble block w-full text-sm pb-3'> <p class='text-left  border bg-white mr-2 px-3 py-2 inline-block rounded-3xl rounded-br-sm' style='max-width:66%;'> " + message + "</p> </h1>"
-        textBox.value = ''
+        input.innerHTML += "<h1 class='bubble block w-full text-sm pb-3'> <p class='text-left  border bg-white mr-2 px-3 py-2 inline-block rounded-lg rounded-br-sm' style='max-width:66%;'> " + message + "</p> </h1>"
+        textBox.value = '' 
         scrollToBottom('liftUp')
 
         if (i == responses.length - 1) {
