@@ -20,7 +20,7 @@ var responses = [
 
 
     ]
-var progressInfoArray = ["Initializing..","Reading Response Arrays...","Checking performance...","Setting up environment...","Updating...","Almost done...","Loading..."]
+var progressInfoArray = ["Initializing..","Initializing...","Checking performance...","Setting up environment...","Updating...","Almost done...","Loading..."]
 var sendButton = document.getElementById("sendButton")
 var textBox = document.getElementById("textBox")
 
@@ -39,7 +39,7 @@ function scrollToBottom(element) {
 var filler = document.getElementById('prograssFill')
 
 function removeBootScreen() {
-    var duration = 26000
+    var duration = 35000
     setTimeout(function() {
         closeElement('bootScreen')
         document.getElementById('statusBar1').style.color = 'black'
