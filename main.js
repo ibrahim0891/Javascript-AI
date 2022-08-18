@@ -45,7 +45,7 @@ function scrollToBottom(element) {
 var filler = document.getElementById('prograssFill')
 
 function removeBootScreen() {
-    var duration = 25000 
+    var duration = 30000
     setTimeout(function() {
         closeElement('bootScreen')
         document.getElementById('statusBar1').style.color = 'black'
@@ -92,7 +92,7 @@ function emulateMessage() {
 
     if (message != "") {
         input.innerHTML += "<h1 class='bubble block w-full text-sm pb-3'> <p class='text-left  border bg-white mr-2 px-3 py-2 inline-block rounded-lg rounded-br-sm' style='max-width:66%;'> " + message + "</p> </h1>"
-        textBox.value = ''
+        textBox.value = '' 
         scrollToBottom('liftUp')
 
         if (i == responses.length - 1) {
