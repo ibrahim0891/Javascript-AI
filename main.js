@@ -1,6 +1,6 @@
 var responses = [
     "Hello! I'm a AI robot programmed with JS. What is you name?",
-    "Oh,Nice to meet you! <br> How are you?? ",
+    "Oh Okay,Nice to meet you!<br> How are you?? ",
     'May I know where are you from?? ',
     'I\'ve never been to this place. I\'ve been stuck inside this GitHub server for a long time.<br> I\'m very glad to meet with you and,I\'d love to talk with you. <br>Lets talk about our hobby!!',
     "Do you like football??",
