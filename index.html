@@ -56,6 +56,47 @@
         .zoomOut {
             animation: zoomOut 0.7s 1 linear;
         }
+
+        .showOrientationWarning {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+            text-align: center;
+            max-width: 100vw;
+            margin: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 500;
+            font-size:2em;
+        }
+
+        @media screen and (orientation:portrait) {
+            .chat-box {
+                display: flex;
+            }
+
+            .showOrientationWarning {
+                display: none;
+            }
+        }
+
+        @media screen and (orientation:landscape) {
+            
+            .chat-box {
+                display: none;
+                 !important
+            }
+
+            .showOrientationWarning {
+                display: block;
+            }
+        }
     </style>
     <script>
         tailwind.config = {
@@ -65,6 +106,7 @@
 </head>
 
 <body class="tilt p-4 h-[100vh] w-full flex items-start sm:items-center justify-center" onload="removeBootScreen()">
+    <div class="showOrientationWarning"> Please turn off Auto rotate of your devise or resize your browser window to Portrait size to view the page </div>
     <div class="chat-box relative aspect-[2/4] max-w-[370px] bg-white rounded-[35px] overflow-auto flex flex-col items-center justify-between ring-8 ring-black">
         <div class="w-full bg-white px-2 pt-0 flex items-start justify-between" style="z-index: 250;">
             <div id="statusBar1" class=" flex items-center justify-start w-1/3 pl-3 pt-2.5 text-white">
@@ -114,8 +156,8 @@
                 <span class="flex items-center justify-center bg-green-500 text-white text-lg h-[1.9rem] w-[1.9rem] p-2 rounded-full shadow-md shadow-slate-400 ml-1">
                     <i class="fa fa-images "></i>
                 </span>
-                
-                <input type="text" class='focus:outline-0 rounded-full border text-sm text-gray-500 px-3 py-2 mx-2 w-full' placeholder="Say 'Hi' to AI..." id="textBox" >
+
+                <input type="text" class='focus:outline-0 rounded-full border text-sm text-gray-500 px-3 py-2 mx-2 w-full' placeholder="Say 'Hi' to AI..." id="textBox">
                 <button id="sendButton" class="fa fa-paper-plane text-3xl"> </button>
             </div>
         </div>
