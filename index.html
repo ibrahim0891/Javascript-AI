@@ -86,18 +86,17 @@
                 display: none;
             }
         }
-
+*/
         @media screen and (orientation:landscape) {
             
             .chat-box {
-                display: none;
-                 !important
+                display: none!important;
             }
 
             .showOrientationWarning {
                 display: block;
             }
-        } */
+        } 
     </style>
     <script>
         tailwind.config = {
@@ -108,7 +107,7 @@
 
 <body class="tilt p-6 py-10 h-[100vh] w-full flex items-start sm:items-center justify-center" onload="removeBootScreen()">
     <div class="showOrientationWarning"> Please turn off Auto rotate of your devise or resize your browser window to Portrait size to view the page </div>
-    <div class="chat-box relative aspect-[2/4] h-full bg-white rounded-[35px] overflow-auto flex flex-col items-center justify-between ring-8 ring-black shadow-md shadow-slate-800/80">
+    <div class="chat-box relative md:w-[420px] aspect-[2/4] bg-white rounded-[35px] overflow-auto flex flex-col items-center justify-between ring-8 ring-black shadow-md shadow-slate-800/80">
         <div class="w-full bg-white px-2 pt-0 flex items-start justify-between" style="z-index: 250;">
             <div id="statusBar1" class=" flex items-center justify-start w-1/3 pl-3 pt-2.5 text-white">
                 <p class="text-sm mr-1 font-bold" id="clock"> 12:01 PM </p>
@@ -165,7 +164,7 @@
         </div>
 
         <div style="position:absolute; top:0; z-index:100;" id="sideNav" class=" hidden zoomIn overflow-auto flex flex-col justify-between top-0 right-0 w-full h-full bg-white shadow-lg shadow-black">
-            <div style="position:relative; top-0" class="bg-white relative w-full flex items-center justify-between px-4 py-2 pt-10 border-b">
+            <div style="position:relative;" class="bg-white relative w-full flex items-center justify-between px-4 py-2 pt-10 border-b">
                 <i class=" fa fa-chevron-left text-gray-700 top-0 right-0" onclick="closeElement('sideNav')"></i>
                 <h1 class="text-2xl font-bold"> Introduction </h1>
                 <i class=" fa fa-cog text-gray-700 top-0 right-0" onclick="closeElement('sideNav')"></i>

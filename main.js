@@ -1,3 +1,4 @@
+/* An array of strings that contains the responses of the AI. */
 var responses = [
     "Hello! I'm a AI robot programmed with JS. What is you name?",
     "Oh Okay,Nice to meet you!<br> How are you?? ",
@@ -35,6 +36,10 @@ var input = document.getElementById("input")
 var progressOutput = document.getElementById('progressOutput')
 var i = -1
 
+/**
+ * Scroll to the bottom of the element with the id of 'element'.
+ * @param element - The id of the element you want to scroll to.
+ */
 function scrollToBottom(element) {
     var i = 0
     var elem = document.getElementById(element)
@@ -44,7 +49,12 @@ function scrollToBottom(element) {
 
 var filler = document.getElementById('prograssFill')
 
+/**
+ * It takes a duration in milliseconds, and then it fills a progress bar and updates a progress info
+ * text with a set interval
+ */
 function removeBootScreen() {
+    /* Closing the boot screen after 10 seconds. */
     var duration = 10000 
     setTimeout(function() {
         closeElement('bootScreen')
@@ -52,6 +62,10 @@ function removeBootScreen() {
         document.getElementById('statusBar2').style.color = 'black'
         openElement("sideNav","flex")
     }, duration)
+    /**
+     * It fills the progress bar with the percentage of the duration of the bootscreen time.
+     * @param j - The percentage of the progress bar that should be filled.
+     */
     var j = (1000*100)/duration
     function fillProgressBar(j){
         filler.style.width = j+"%"
@@ -62,6 +76,12 @@ function removeBootScreen() {
     },1000)
     
     k = 0
+    /**
+     * It takes the duration of the bootscreen time and divides it by the number of elements in the array, and
+     * then updates the progressOutput element with the value of the array at the index of the current
+     * time divided by the breakpoint.
+     * @param k - the index of the progressInfoArray
+     */
     var progressInfoBreakPoint = duration/(progressInfoArray.length+1)
     function updateProgressInfo(k) {
         progressOutput.innerHTML = progressInfoArray[k]
@@ -87,6 +107,7 @@ function emulateMessage() {
         input.innerHTML += "<p class='bubble text-center text-sm text-stone-500 py-3 '> No more messages are available. Please Refresh the page. </p>"
         sendButton.removeEventListener("click", emulateMessage)
         textBox.disable
+        /* Scrolling to the bottom of the element with the id of 'liftUp'. */
         scrollToBottom('liftUp')
     }
 
@@ -120,6 +141,7 @@ function openElement(elementId, display) {
     document.getElementById(elementId).style.display = display
 }
 
+/* A function that is called every second to update the time in the status bar. */
 function runClock() {
     var a = new Date()
     var hour = a.getHours();
