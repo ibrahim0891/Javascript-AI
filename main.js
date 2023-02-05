@@ -1,6 +1,6 @@
 /* An array of strings that contains the responses of the AI. */
 var responses = [
-    "Hello! I'm a AI robot programmed with JS. What is you name?",
+    "Hello! I'm a AI robot programmed with JS. What is your name?",
     "Oh Okay,Nice to meet you!<br> How are you?? ",
     'May I know where are you from?? ',
     'I\'ve never been to this place. I\'ve been stuck inside this GitHub server for a long time.<br> I\'m very glad to meet with you and,I\'d love to talk with you. <br>Lets talk about our hobby!!',
@@ -34,6 +34,7 @@ var textBox = document.getElementById("textBox")
 var output = document.getElementById("output")
 var input = document.getElementById("input")
 var progressOutput = document.getElementById('progressOutput')
+
 var i = -1
 
 /**
@@ -55,7 +56,7 @@ var filler = document.getElementById('prograssFill')
  */
 function removeBootScreen() {
     /* Closing the boot screen after 10 seconds. */
-    var duration = 10000 
+    var duration = 3000
     setTimeout(function() {
         closeElement('bootScreen')
         document.getElementById('statusBar1').style.color = 'black'
